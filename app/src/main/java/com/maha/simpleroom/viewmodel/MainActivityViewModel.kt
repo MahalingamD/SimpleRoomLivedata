@@ -31,4 +31,6 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
     fun deleteUserDetail(aUser: User) {
         mUserDataBase!!.userDao().delete(aUser)
     }
+
+
 }
