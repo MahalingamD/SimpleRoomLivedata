@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "199100418527",
+    "firebase_url": "https://simpleroom.firebaseio.com",
+    "project_id": "simpleroom",
+    "storage_bucket": "simpleroom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199100418527:android:bfb05cec8265faa3549c6a",
+        "android_client_info": {
+          "package_name": "com.maha.simpleroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199100418527-efqir986nnqijl663f0hnj52gp4qguhp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.maha.simpleroom",
+            "certificate_hash": "e5f9d68339effdd6462df74eef87e53ee47cc58d"
+          }
+        },
+        {
+          "client_id": "199100418527-jmv3qfuguelfgfi0t1u4uubh8q7orgar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAARq3U1_fgFJOmEFO9E2epWF99DtJjnTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199100418527-jmv3qfuguelfgfi0t1u4uubh8q7orgar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
