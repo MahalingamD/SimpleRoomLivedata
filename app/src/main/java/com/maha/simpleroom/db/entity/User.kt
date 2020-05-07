@@ -18,4 +18,7 @@ class User {
 
     @ColumnInfo(name = "money")
     var money=""
+
+    @ColumnInfo(name="usertype")
+    var usertype=""
 }

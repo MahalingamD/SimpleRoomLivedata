@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             aUser.name = "A $aCount"
             aUser.country = "India $aCount"
             aUser.money = "$aCount"
+            aUser.usertype = "sample"
 
             mViewmodel.insertUserDetail(aUser)
 

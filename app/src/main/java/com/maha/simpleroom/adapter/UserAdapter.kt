@@ -42,7 +42,7 @@ class UserAdapter(
             val auser = mUserList[position]
             aNameText.text = auser.name
             aCountryText.text = auser.country
-            aMoneyText.text = auser.money
+            aMoneyText.text = auser.usertype
 
             aDeleteBut.setOnClickListener {
                 mViewmodel.deleteUserDetail(auser)
@@ -50,6 +50,7 @@ class UserAdapter(
 
             aEditBut.setOnClickListener {
                 auser.name="edited $position"
+                auser.usertype="Edit user"
                 mViewmodel.updateUserDetail(auser)
             }
         }
