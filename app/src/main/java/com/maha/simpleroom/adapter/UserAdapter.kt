@@ -36,6 +36,7 @@ class UserAdapter(
         private val aCountryText: TextView = itemView.findViewById(R.id.country_txt)
         private val aMoneyText: TextView = itemView.findViewById(R.id.money_txt)
         private val aDeleteBut: TextView = itemView.findViewById(R.id.but_delete)
+        private val aEditBut: TextView = itemView.findViewById(R.id.but_Edit)
 
         fun bindItems(position: Int) {
             val auser = mUserList[position]
@@ -45,6 +46,11 @@ class UserAdapter(
 
             aDeleteBut.setOnClickListener {
                 mViewmodel.deleteUserDetail(auser)
+            }
+
+            aEditBut.setOnClickListener {
+                auser.name="edited $position"
+                mViewmodel.updateUserDetail(auser)
             }
         }
     }
