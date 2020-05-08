@@ -19,7 +19,7 @@
             android:text="name"
             android:padding="5dp"
             app:layout_constraintStart_toStartOf="parent"
-
+android:textColor="#000"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:text="country"
             android:padding="5dp"
+            android:textColor="#000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name_txt"
             tools:ignore="MissingConstraints" />
@@ -41,6 +42,7 @@
             android:layout_height="wrap_content"
             android:text="money"
             android:padding="5dp"
+            android:textColor="#000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/country_txt"
             tools:ignore="MissingConstraints" />
@@ -51,7 +53,6 @@
             android:id="@+id/but_delete"
             tools:ignore="MissingConstraints"
             android:text="delete"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

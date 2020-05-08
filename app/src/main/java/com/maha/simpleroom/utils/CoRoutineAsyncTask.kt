@@ -1,4 +1,4 @@
-package com.maha.simpleroom
+package com.maha.simpleroom.utils
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import com.maha.simpleroom.db.database.UserDatabase
 import com.maha.simpleroom.db.entity.User
 
-class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
+class RoomLiveDataViewModel(application: Application) : AndroidViewModel(application) {
 
     var aMutableUserList: LiveData<List<User>>? = null
 

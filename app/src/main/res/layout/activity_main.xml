@@ -4,27 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="16dp"
+    tools:context=".activity.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/toolbar_lay"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/live_room_but"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        android:padding="16dp"
+        android:text="Room livedata"
+        android:textColor="#fff"
+        app:shapeAppearance="@style/CustomShapeOVerlay"
         android:background="@color/colorPrimary"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/add_but"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:gravity="end"
-            android:padding="10dp"
-            android:text="ADD"
-            android:textColor="#FFF"
-            android:textSize="16sp" />
 
-    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/live_retrofit_but"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        android:padding="16dp"
+        android:text="Retrofit livedata"
+        android:textColor="#fff"
+        app:shapeAppearance="@style/CustomShapeOVerlay_cut"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/live_room_but"
+        tools:ignore="MissingConstraints" />
+
+
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_button"
@@ -42,13 +57,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/user_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_lay"
-        tools:ignore="MissingConstraints"
-        tools:listitem="@layout/item_layout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

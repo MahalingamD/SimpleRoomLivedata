@@ -6,15 +6,18 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.maha.simpleroom.R
+import com.maha.simpleroom.activity.RetrofitLivedataActivity
 import com.maha.simpleroom.activity.RoomLiveDataActivity
 import com.maha.simpleroom.db.entity.User
+import com.maha.simpleroom.model.ResponseUser
+import com.maha.simpleroom.viewmodel.RetrofitLiveDataViewModel
 import com.maha.simpleroom.viewmodel.RoomLiveDataViewModel
 
-class UserAdapter(
-    mainActivity: RoomLiveDataActivity,
-    var mUserList: ArrayList<User>,
-    var mViewmodel: RoomLiveDataViewModel
-) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
+class RetrofitLiveAdapter(
+    mainActivity: RetrofitLivedataActivity,
+    var mUserList: ArrayList<ResponseUser>,
+    var mViewmodel: RetrofitLiveDataViewModel
+) : RecyclerView.Adapter<RetrofitLiveAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
@@ -40,25 +43,18 @@ class UserAdapter(
 
         fun bindItems(position: Int) {
             val auser = mUserList[position]
-            aNameText.text = auser.name
-            aCountryText.text = auser.country
-            aMoneyText.text = auser.usertype
+            aNameText.text = auser.id
+            aCountryText.text = auser.title
+            aMoneyText.text = auser.body
 
-            aDeleteBut.setOnClickListener {
-                mViewmodel.deleteUserDetail(auser)
-            }
-
-            aEditBut.setOnClickListener {
-                auser.name="edited $position"
-                auser.usertype="Edit user"
-                mViewmodel.updateUserDetail(auser)
-            }
+            aDeleteBut.visibility=View.GONE
+            aEditBut.visibility=View.GONE
         }
     }
 
 
-    fun update(aUserList: ArrayList<User>) {
-        mUserList = aUserList
+    fun update(aUserList: ArrayList<ResponseUser>) {
+        mUserList.addAll(aUserList)
         notifyDataSetChanged()
     }
 }
